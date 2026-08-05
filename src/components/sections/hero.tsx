@@ -80,7 +80,7 @@ export function Hero() {
           >
             <Link
               href="#projects"
-              className="group flex items-center gap-2 bg-text-primary text-white px-7 py-3.5 rounded-full font-medium transition-all hover:bg-accent hover:-translate-y-0.5 hover:shadow-md"
+              className="group flex items-center gap-2 bg-accent text-white px-7 py-3.5 rounded-full font-medium transition-all hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-md"
             >
               View Projects
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

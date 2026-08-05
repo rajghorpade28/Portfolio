@@ -125,7 +125,7 @@ export function Projects() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-text-primary text-bg-primary font-semibold hover:bg-text-secondary transition-colors interactive"
+                    className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent-hover transition-colors"
                   >
                     <Github size={18} />
                     View Repository

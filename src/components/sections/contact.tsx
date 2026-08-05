@@ -145,7 +145,7 @@ export function Contact() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-text-primary text-bg-primary px-8 py-3.5 rounded-xl font-semibold hover:bg-text-secondary transition-colors interactive disabled:opacity-70"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-accent text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-accent-hover transition-colors disabled:opacity-70"
                 >
                   {isSubmitting ? (
                     <div className="w-5 h-5 border-2 border-bg-primary border-t-transparent rounded-full animate-spin" />
