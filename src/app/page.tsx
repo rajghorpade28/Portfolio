@@ -5,7 +5,7 @@ import { About } from "@/components/sections/about";
 import { Education } from "@/components/sections/education";
 import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
-import { Hackathons } from "@/components/sections/hackathons";
+import { Achievements } from "@/components/sections/achievements";
 import { GithubStats } from "@/components/sections/github-stats";
 import { Contact } from "@/components/sections/contact";
 import { fetchGitHubUser } from "@/lib/github";
@@ -24,7 +24,7 @@ export default async function Home() {
         <Education />
         <Skills />
         <Projects />
-        <Hackathons />
+        <Achievements />
         <GithubStats user={user} />
         <Contact />
       </main>
