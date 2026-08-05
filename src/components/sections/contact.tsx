@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2, Mail } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/icons";
 
 export function Contact() {
@@ -168,6 +168,14 @@ export function Contact() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center items-center gap-4"
         >
+          <a
+            href="mailto:rajghorpade231@gmail.com"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-text-muted transition-colors"
+          >
+            <Mail size={18} />
+            <span className="font-medium">rajghorpade231@gmail.com</span>
+          </a>
+
           <a
             href="https://github.com/rajghorpade28"
             target="_blank"

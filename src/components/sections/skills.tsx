@@ -13,7 +13,11 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["FastAPI", "REST APIs"],
+    skills: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
+  },
+  {
+    title: "Databases",
+    skills: ["MySQL", "MongoDB"],
   },
   {
     title: "AI & Machine Learning",
