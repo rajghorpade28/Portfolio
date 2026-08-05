@@ -169,9 +169,9 @@ export function Hero() {
                     <span className="text-blue-400">&quot;stack&quot;</span>
                     <span className="text-text-muted">: [</span>
                   </p>
-                  <p className="pl-4 text-yellow-400">&quot;Python&quot;, &quot;FastAPI&quot;,</p>
-                  <p className="pl-4 text-yellow-400">&quot;Node.js&quot;, &quot;React&quot;,</p>
-                  <p className="pl-4 text-yellow-400">&quot;Gemini API&quot;, &quot;MediaPipe&quot;</p>
+                  <p className="pl-4 text-yellow-400">&quot;TypeScript&quot;, &quot;React&quot;, &quot;Next.js&quot;,</p>
+                  <p className="pl-4 text-yellow-400">&quot;Node.js&quot;, &quot;Express&quot;, &quot;FastAPI&quot;,</p>
+                  <p className="pl-4 text-yellow-400">&quot;Tailwind CSS&quot;, &quot;Gemini API&quot;</p>
                   <p>
                     <span className="text-text-muted">],</span>
                   </p>
