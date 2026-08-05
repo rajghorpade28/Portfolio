@@ -53,7 +53,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-bg-primary text-text-primary">
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
