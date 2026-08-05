@@ -28,18 +28,10 @@
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
     font-family: var(--font-sans);
-    cursor: none; /* Custom cursor */
   }
 
   html {
     scroll-behavior: smooth;
-  }
-  
-  /* Disable custom cursor on touch devices */
-  @media (pointer: coarse) {
-    body {
-      cursor: auto;
-    }
   }
 }
 
