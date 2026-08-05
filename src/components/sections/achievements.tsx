@@ -45,7 +45,7 @@ const FEATURED_ACHIEVEMENTS = [
 
 export function Achievements() {
   return (
-    <section id="achievements" className="py-24 relative bg-bg-secondary border-y border-border-subtle">
+    <section id="achievements" className="py-24 bg-bg-secondary">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

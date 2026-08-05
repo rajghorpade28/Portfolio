@@ -2,10 +2,40 @@
 
 import { motion } from "framer-motion";
 
+const educationData = [
+  {
+    id: "siesgst",
+    institution: "SIES Graduate School of Technology",
+    degree: "Bachelor of Engineering",
+    field: "Information Technology",
+    duration: "August 2025 – August 2028",
+    grade: null,
+    current: true,
+  },
+  {
+    id: "bharati",
+    institution: "Bharati Vidyapeeth",
+    degree: "Diploma in Computer Technology",
+    field: "Computer Engineering",
+    duration: "2022 – 2025",
+    grade: "90.34%",
+    current: false,
+  },
+  {
+    id: "shreeram",
+    institution: "Shreeram Vidyalaya & Junior College of Science",
+    degree: "Secondary Education",
+    field: null,
+    duration: null,
+    grade: "88.80%",
+    current: false,
+  },
+];
+
 export function Education() {
   return (
-    <section id="education" className="py-24 relative bg-bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="education" className="py-24 bg-bg-secondary">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,44 +49,59 @@ export function Education() {
           <div className="h-1 w-12 bg-accent mt-4 rounded-full" />
         </motion.div>
 
-        <div className="relative pl-6 lg:pl-10">
-          {/* Timeline Line */}
-          <div className="absolute left-0 top-2 bottom-0 w-px bg-border-subtle" />
+        <div className="relative">
+          {/* Timeline vertical line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-border-subtle" />
 
-          {/* Timeline Item */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            {/* Timeline Dot */}
-            <div className="absolute -left-[29px] lg:-left-[45px] top-2 w-4 h-4 rounded-full bg-bg-primary border-2 border-accent" />
-            
-            <div className="glass-card rounded-2xl p-6 lg:p-8 hover:-translate-y-1 transition-transform interactive relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-text-primary">
-                    Bachelor of Engineering
-                  </h3>
-                  <h4 className="text-lg text-accent mt-1">Information Technology</h4>
-                </div>
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium whitespace-nowrap self-start md:self-auto">
-                  Expected 2028
-                </div>
-              </div>
+          <div className="space-y-10">
+            {educationData.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative pl-16"
+              >
+                {/* Timeline dot */}
+                <div className={`absolute left-[14px] top-6 w-3 h-3 rounded-full border-2 ${item.current ? "bg-accent border-accent" : "bg-white border-border-muted"}`} />
 
-              <div className="text-text-secondary">
-                <p className="font-medium text-lg mb-2">SIES Graduate School of Technology</p>
-                <p className="text-sm text-text-muted">
-                  Currently pursuing coursework in software engineering, algorithms, data structures, and emerging technologies.
-                </p>
-              </div>
-            </div>
-          </motion.div>
+                <div className="bg-white border border-border-subtle rounded-2xl p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
+                    <div>
+                      <h3 className="text-xl font-bold text-text-primary">
+                        {item.degree}
+                      </h3>
+                      {item.field && (
+                        <p className="text-accent font-medium mt-0.5">{item.field}</p>
+                      )}
+                    </div>
+                    <div className="flex flex-col items-start sm:items-end gap-1.5 shrink-0">
+                      {item.current && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                          Current
+                        </span>
+                      )}
+                      {item.grade && (
+                        <span className="inline-flex px-3 py-1 bg-bg-secondary border border-border-subtle text-text-secondary text-xs font-semibold rounded-full">
+                          Grade: {item.grade}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <p className="text-text-secondary font-medium text-base">
+                    {item.institution}
+                  </p>
+
+                  {item.duration && (
+                    <p className="text-text-muted text-sm mt-1.5">{item.duration}</p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

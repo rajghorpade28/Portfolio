@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
   { name: "Achievements", href: "#achievements" },
+  { name: "Volunteering", href: "#volunteering" },
   { name: "Contact", href: "#contact" },
 ];
 

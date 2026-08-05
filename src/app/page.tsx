@@ -6,11 +6,12 @@ import { Education } from "@/components/sections/education";
 import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
 import { Achievements } from "@/components/sections/achievements";
+import { Volunteering } from "@/components/sections/volunteering";
 import { GithubStats } from "@/components/sections/github-stats";
 import { Contact } from "@/components/sections/contact";
 import { fetchGitHubUser } from "@/lib/github";
 
-export const revalidate = 3600; // Revalidate at most every hour
+export const revalidate = 3600;
 
 export default async function Home() {
   const user = await fetchGitHubUser();
@@ -25,6 +26,7 @@ export default async function Home() {
         <Skills />
         <Projects />
         <Achievements />
+        <Volunteering />
         <GithubStats user={user} />
         <Contact />
       </main>

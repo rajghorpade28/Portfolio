@@ -29,20 +29,20 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-bg-primary"
     >
-      {/* Background grid */}
+      {/* Subtle light grid */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px)",
+              "linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px)",
             backgroundSize: "40px 40px",
             maskImage:
-              "radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 100%)",
+              "radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 100%)",
             WebkitMaskImage:
-              "radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 100%)",
+              "radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 100%)",
           }}
         />
       </div>
@@ -54,20 +54,23 @@ export function Hero() {
           initial="hidden"
           animate="visible"
         >
+          <motion.p
+            variants={itemVariants}
+            className="text-sm font-semibold text-accent uppercase tracking-widest mb-6"
+          >
+            Software Engineering Student
+          </motion.p>
+
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-[72px] leading-tight font-bold tracking-tight text-text-primary mb-6"
+            className="text-4xl md:text-5xl lg:text-[68px] leading-[1.1] font-bold tracking-tight text-text-primary mb-8"
           >
             Building modern software, AI-powered applications, and automation solutions.
           </motion.h1>
 
-          <motion.div variants={itemVariants} className="mb-10">
-            <h2 className="text-xl md:text-2xl font-medium text-text-secondary">
-              Raj Ghorpade
-            </h2>
-            <p className="text-text-muted mt-2 text-lg">
-              Information Technology Student <br />
-              SIES Graduate School of Technology, Class of 2028
+          <motion.div variants={itemVariants} className="mb-12">
+            <p className="text-lg text-text-secondary">
+              Raj Ghorpade &mdash; Information Technology, SIES Graduate School of Technology, Class of 2028
             </p>
           </motion.div>
 
@@ -77,7 +80,7 @@ export function Hero() {
           >
             <Link
               href="#projects"
-              className="group flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-medium transition-all hover:bg-accent-hover hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(59,130,246,0.3)]"
+              className="group flex items-center gap-2 bg-text-primary text-white px-7 py-3.5 rounded-full font-medium transition-all hover:bg-accent hover:-translate-y-0.5 hover:shadow-md"
             >
               View Projects
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -87,7 +90,7 @@ export function Hero() {
               href="https://github.com/rajghorpade28"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border border-border-subtle bg-bg-secondary text-text-primary hover:border-accent hover:-translate-y-1 transition-all"
+              className="flex items-center gap-2 px-7 py-3.5 rounded-full border border-border-muted bg-bg-primary text-text-secondary hover:text-text-primary hover:border-text-primary hover:-translate-y-0.5 hover:shadow-sm transition-all"
             >
               <Github size={18} />
               <span>GitHub</span>
@@ -97,7 +100,7 @@ export function Hero() {
               href="https://www.linkedin.com/in/raj-ghorpade-90520526b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border border-border-subtle bg-bg-secondary text-text-primary hover:border-accent hover:-translate-y-1 transition-all"
+              className="flex items-center gap-2 px-7 py-3.5 rounded-full border border-border-muted bg-bg-primary text-text-secondary hover:text-text-primary hover:border-text-primary hover:-translate-y-0.5 hover:shadow-sm transition-all"
             >
               <Linkedin size={18} />
               <span>LinkedIn</span>

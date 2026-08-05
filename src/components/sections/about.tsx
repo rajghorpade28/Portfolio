@@ -6,7 +6,7 @@ import { GraduationCap, Calendar, Code, MapPin } from "lucide-react";
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-24 bg-bg-primary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
