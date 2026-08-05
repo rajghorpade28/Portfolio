@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "Java", "JavaScript"],
+    skills: ["TypeScript", "JavaScript (ES6+)", "Python", "Java"],
   },
   {
     title: "Frontend",
-    skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "HTML5", "CSS3", "Responsive Design"],
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
+    skills: ["Node.js", "Express.js", "FastAPI", "RESTful APIs", "WebSockets", "JWT Authentication"],
   },
   {
     title: "Databases",
@@ -24,16 +24,16 @@ const skillCategories = [
     skills: ["Gemini API", "MediaPipe", "OpenCV", "Computer Vision", "Prompt Engineering"],
   },
   {
-    title: "Tools",
+    title: "Tools & DevOps",
     skills: ["Git", "GitHub", "VS Code", "Postman", "Swagger", "Ubuntu Linux"],
   },
   {
     title: "Cloud & Infra",
-    skills: ["Hostinger VPS", "Deployment"],
+    skills: ["Hostinger VPS", "Vercel", "Deployment & Hosting"],
   },
   {
-    title: "Payments",
-    skills: ["Razorpay", "UPI Integration"],
+    title: "Payments & APIs",
+    skills: ["Razorpay Integration", "UPI Integration", "Third-Party APIs"],
   },
 ];
 
