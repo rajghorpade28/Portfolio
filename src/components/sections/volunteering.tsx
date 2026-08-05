@@ -30,9 +30,9 @@ export function Volunteering() {
           {/* Timeline line */}
           <div className="absolute left-5 top-0 bottom-0 w-px bg-border-subtle" />
           {/* Timeline dot */}
-          <div className="absolute left-[14px] top-6 w-3 h-3 rounded-full bg-white border-2 border-accent" />
+          <div className="absolute left-[14px] top-6 w-3 h-3 rounded-full bg-bg-primary border-2 border-accent" />
 
-          <div className="bg-white border border-border-subtle rounded-2xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div className="glass-card rounded-2xl p-8 hover:-translate-y-0.5 transition-all">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
               <div>
                 <h3 className="text-xl font-bold text-text-primary">Event Volunteer</h3>
