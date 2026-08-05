@@ -23,7 +23,6 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Simple intersection observer logic for active section
       const sections = navLinks.map((link) => link.href.substring(1));
       let current = "";
       for (const section of sections) {
@@ -51,18 +50,16 @@ export function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="#home" className="text-xl font-bold tracking-tight interactive">
+        <Link href="#home" className="text-xl font-bold tracking-tight">
           Raj<span className="text-accent">.</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors interactive ${
+              className={`text-sm font-medium transition-colors ${
                 activeSection === link.href.substring(1)
                   ? "text-accent"
                   : "text-text-secondary hover:text-text-primary"
@@ -71,19 +68,10 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 text-sm font-medium border border-accent text-accent rounded-full hover:bg-accent hover:text-white transition-all interactive hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(59,130,246,0.25)]"
-          >
-            Resume
-          </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-text-primary interactive"
+          className="md:hidden text-text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -91,7 +79,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -114,14 +101,6 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium py-2 text-accent"
-            >
-              Resume
-            </a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { CustomCursor } from "@/components/ui/custom-cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,26 +21,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rajghorpade.dev"),
   title: "Raj Ghorpade | Portfolio",
-  description: "Professional portfolio of Raj Ghorpade showcasing education, software projects, GitHub repositories, and technical work.",
+  description: "Portfolio of Raj Ghorpade — Information Technology student at SIES GST, building software, AI-powered applications, and automation solutions.",
   openGraph: {
     title: "Raj Ghorpade | Portfolio",
-    description: "Professional portfolio of Raj Ghorpade showcasing education, software projects, GitHub repositories, and technical work.",
-    url: "https://rajghorpade.dev", // Placeholder URL
+    description: "Portfolio of Raj Ghorpade — Information Technology student at SIES GST, building software, AI-powered applications, and automation solutions.",
+    url: "https://rajghorpade.dev",
     siteName: "Raj Ghorpade Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-      }
-    ],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Raj Ghorpade | Portfolio",
-    description: "Professional portfolio of Raj Ghorpade showcasing education, software projects, GitHub repositories, and technical work.",
+    description: "Portfolio of Raj Ghorpade — Information Technology student at SIES GST, building software, AI-powered applications, and automation solutions.",
     images: ["/og-image.png"],
   },
 };
@@ -65,7 +57,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <CustomCursor />
           {children}
         </ThemeProvider>
       </body>

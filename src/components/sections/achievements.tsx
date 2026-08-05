@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Medal, Cloud, Bot, ExternalLink, Award } from "lucide-react";
+import { Trophy, Medal, Cloud, Bot } from "lucide-react";
 
 const FEATURED_ACHIEVEMENTS = [
   {
@@ -42,20 +42,6 @@ const FEATURED_ACHIEVEMENTS = [
   }
 ];
 
-const CERTIFICATIONS = [
-  {
-    id: "web3",
-    title: "Web3 Development Workshop",
-    organization: "Tech Organization",
-    date: "2025",
-  },
-  {
-    id: "hack-flame",
-    title: "Hack The Flame 2025",
-    organization: "Hackathon Participation",
-    date: "2025",
-  }
-];
 
 export function Achievements() {
   return (
@@ -114,41 +100,6 @@ export function Achievements() {
                 <p className="text-text-secondary leading-relaxed flex-grow">
                   {achievement.description}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications Grid */}
-        <div>
-          <h3 className="text-2xl font-bold text-text-primary mb-8 flex items-center gap-2">
-            <Award size={24} className="text-accent" />
-            Certifications
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CERTIFICATIONS.map((cert, index) => (
-              <motion.div
-                key={cert.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-bg-primary border border-border-subtle rounded-xl p-6 flex flex-col group hover:border-accent/50 transition-colors"
-              >
-                <h4 className="text-lg font-semibold text-text-primary mb-2 line-clamp-2">
-                  {cert.title}
-                </h4>
-                <div className="text-sm text-text-secondary mb-6 flex-grow">
-                  <p>{cert.organization}</p>
-                  <p>{cert.date}</p>
-                </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-text-primary transition-colors mt-auto w-fit"
-                >
-                  View Certificate
-                  <ExternalLink size={14} />
-                </a>
               </motion.div>
             ))}
           </div>

@@ -4,44 +4,36 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Programming",
-    skills: ["Python", "Java"],
+    title: "Programming Languages",
+    skills: ["Python", "Java", "JavaScript"],
   },
   {
-    title: "Web Technologies",
-    skills: ["HTML", "CSS", "JavaScript"],
+    title: "Frontend",
+    skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
   },
   {
-    title: "Developer Tools",
-    skills: ["Git", "GitHub", "Development Workflow"],
+    title: "Backend",
+    skills: ["FastAPI", "REST APIs"],
   },
   {
-    title: "Artificial Intelligence",
-    skills: ["Actively exploring and learning AI concepts"],
-    isInterest: true,
-  }
+    title: "AI & Machine Learning",
+    skills: ["Gemini API", "MediaPipe", "OpenCV", "Computer Vision", "Prompt Engineering"],
+  },
+  {
+    title: "Tools & Platforms",
+    skills: ["Git", "GitHub", "VS Code", "Postman", "Swagger", "Ubuntu Linux"],
+  },
+  {
+    title: "Cloud & Infrastructure",
+    skills: ["Hostinger VPS", "Deployment"],
+  },
+  {
+    title: "Payments & Integration",
+    skills: ["Razorpay Integration", "UPI Integration"],
+  },
 ];
 
 export function Skills() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
     <section id="skills" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -58,33 +50,27 @@ export function Skills() {
           <div className="h-1 w-12 bg-accent mt-4 rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform interactive"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="glass-card rounded-xl p-6 hover:-translate-y-1 transition-transform"
             >
-              <h3 className="text-xl font-semibold text-text-primary mb-6">
+              <h3 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">
                 {category.title}
               </h3>
-              
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <motion.div
+                  <span
                     key={skill}
-                    variants={itemVariants}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border ${
-                      category.isInterest 
-                        ? "border-accent/30 bg-accent/5 text-accent" 
-                        : "border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-accent"
-                    } transition-colors`}
+                    className="px-3 py-1.5 rounded-md text-sm font-medium border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-accent transition-colors"
                   >
                     {skill}
-                  </motion.div>
+                  </span>
                 ))}
               </div>
             </motion.div>

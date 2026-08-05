@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/icons";
 import Link from "next/link";
 
@@ -31,9 +31,8 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
     >
-      {/* Background Effects */}
+      {/* Background grid */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Subtle grid */}
         <div
           className="absolute inset-0"
           style={{
@@ -46,8 +45,6 @@ export function Hero() {
               "radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 100%)",
           }}
         />
-        {/* Soft glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent opacity-[0.03] rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full z-10">
@@ -61,7 +58,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-4xl md:text-5xl lg:text-[72px] leading-tight font-bold tracking-tight text-text-primary mb-6"
           >
-            I build practical software, AI-powered applications, and automation tools.
+            Building modern software, AI-powered applications, and automation solutions.
           </motion.h1>
 
           <motion.div variants={itemVariants} className="mb-10">
@@ -80,7 +77,7 @@ export function Hero() {
           >
             <Link
               href="#projects"
-              className="group flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-medium transition-all hover:bg-accent-hover hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(59,130,246,0.3)] interactive"
+              className="group flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-medium transition-all hover:bg-accent-hover hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(59,130,246,0.3)]"
             >
               View Projects
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -90,7 +87,7 @@ export function Hero() {
               href="https://github.com/rajghorpade28"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border border-border-subtle bg-bg-secondary text-text-primary hover:border-accent hover:-translate-y-1 transition-all interactive"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border border-border-subtle bg-bg-secondary text-text-primary hover:border-accent hover:-translate-y-1 transition-all"
             >
               <Github size={18} />
               <span>GitHub</span>
@@ -100,20 +97,10 @@ export function Hero() {
               href="https://www.linkedin.com/in/raj-ghorpade-90520526b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border border-border-subtle bg-bg-secondary text-text-primary hover:border-accent hover:-translate-y-1 transition-all interactive"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border border-border-subtle bg-bg-secondary text-text-primary hover:border-accent hover:-translate-y-1 transition-all"
             >
               <Linkedin size={18} />
               <span>LinkedIn</span>
-            </a>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border border-transparent text-text-secondary hover:text-text-primary hover:underline underline-offset-4 transition-all interactive"
-            >
-              <FileText size={18} />
-              <span>Resume</span>
             </a>
           </motion.div>
         </motion.div>

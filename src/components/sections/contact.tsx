@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2 } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/icons";
 
 export function Contact() {
@@ -172,7 +172,7 @@ export function Contact() {
             href="https://github.com/rajghorpade28"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-text-muted transition-colors interactive"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-text-muted transition-colors"
           >
             <Github size={18} />
             <span className="font-medium">GitHub</span>
@@ -182,20 +182,10 @@ export function Contact() {
             href="https://www.linkedin.com/in/raj-ghorpade-90520526b/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-text-muted transition-colors interactive"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-text-muted transition-colors"
           >
             <Linkedin size={18} />
             <span className="font-medium">LinkedIn</span>
-          </a>
-
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-text-muted transition-colors interactive"
-          >
-            <FileText size={18} />
-            <span className="font-medium">Resume</span>
           </a>
         </motion.div>
       </div>
