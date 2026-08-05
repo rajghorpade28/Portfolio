@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Programming Languages",
+    title: "Languages",
     skills: ["Python", "Java", "JavaScript"],
   },
   {
@@ -20,27 +20,27 @@ const skillCategories = [
     skills: ["MySQL", "MongoDB"],
   },
   {
-    title: "AI & Machine Learning",
+    title: "AI & ML",
     skills: ["Gemini API", "MediaPipe", "OpenCV", "Computer Vision", "Prompt Engineering"],
   },
   {
-    title: "Tools & Platforms",
+    title: "Tools",
     skills: ["Git", "GitHub", "VS Code", "Postman", "Swagger", "Ubuntu Linux"],
   },
   {
-    title: "Cloud & Infrastructure",
+    title: "Cloud & Infra",
     skills: ["Hostinger VPS", "Deployment"],
   },
   {
-    title: "Payments & Integration",
-    skills: ["Razorpay Integration", "UPI Integration"],
+    title: "Payments",
+    skills: ["Razorpay", "UPI Integration"],
   },
 ];
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 bg-bg-primary">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="skills" className="py-24 bg-bg-secondary">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,24 +54,29 @@ export function Skills() {
           <div className="h-1 w-12 bg-accent mt-4 rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-0">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="glass-card rounded-xl p-6 hover:-translate-y-1 transition-transform"
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.4, delay: index * 0.04 }}
+              className="flex flex-col sm:flex-row sm:items-start gap-4 py-5 border-b border-border-subtle last:border-0 group"
             >
-              <h3 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
+              {/* Category label */}
+              <div className="sm:w-40 shrink-0">
+                <span className="text-xs font-bold text-text-muted uppercase tracking-widest group-hover:text-accent transition-colors duration-300">
+                  {category.title}
+                </span>
+              </div>
+
+              {/* Skill pills */}
+              <div className="flex flex-wrap gap-2 flex-1">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 rounded-md text-sm font-medium border border-border-subtle bg-bg-secondary text-text-secondary hover:text-text-primary hover:border-accent transition-colors"
+                    className="px-3 py-1.5 rounded-md text-sm font-medium bg-bg-primary border border-border-subtle text-text-secondary hover:border-accent hover:text-text-primary transition-all duration-200 cursor-default"
                   >
                     {skill}
                   </span>

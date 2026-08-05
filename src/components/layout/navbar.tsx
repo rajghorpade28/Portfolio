@@ -60,9 +60,9 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors nav-link-underline ${
                 activeSection === link.href.substring(1)
-                  ? "text-accent"
+                  ? "text-accent active"
                   : "text-text-secondary hover:text-text-primary"
               }`}
             >
